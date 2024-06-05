@@ -1,0 +1,32 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "scripts/*.ts",
+    "packages/**/*.vue",
+    "packages/**/*.d.ts",
+    "packages/**/*.ts",
+    "packages/directives/domResize.ts",
+    "examples/**/*.vue",
+    "examples/**/*.d.ts",
+    "examples/**/*.ts",
+    "docs/.vitepress/theme/*.ts",
+    "docs/**/*.d.ts",
+    "docs/**/*.ts",
+  ],
+  "exclude": [
+    "packages/**/__tests__/*",
+    "node_modules",
+    "dist",
+    "vite.config.ts"
+  ],
+
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./packages/*"]
+    }
+  }
+}
